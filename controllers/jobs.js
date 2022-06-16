@@ -14,8 +14,6 @@ const getJob = async (req, res, next) => {
     params: { id: jobId },
   } = req;
 
-  // console.log(req.user);
-
   const job = await Job.findOne({
     _id: jobId,
     createdBy: userId,
